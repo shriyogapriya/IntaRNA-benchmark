@@ -1,4 +1,4 @@
-sRNA	gene	geneName	organism	publication	doi	mutation	notes
+sRNA	gene	geneName	organism	publication	doi	mutation-sRNA&gene	notes
 OxyS	b2731	fhlA	NC_000913	Altuvia_Zhang_Argaman-The_Esche_coli-1998	https://doi.org/10.1093/emboj/17.20.6069		
 Spot42	b0720	gltA	NC_000913	Beisel:Storz:The_Base_RNA:2011	https://doi.org/10.1016/j.molcel.2010.12.027		
 Spot42	b2702	srlA	NC_000913	Beisel:Storz:The_Base_RNA:2011	https://doi.org/10.1016/j.molcel.2010.12.027		
@@ -26,20 +26,20 @@ MicC	b2215	ompC	NC_000913	Chen:Zhang:Blyn:MicC_secon_small:2004	https://doi.org/
 Spot42	b1901	araF	NC_000913	Chen_Gottesman-Spot_sRNA_regul-2016	http://dx.doi.org/10.1128/JB.00691-16		
 MicA	b1130	phoP	NC_000913	Coornaert:Lu:Mandin:MicA_sRNA_links:2010	https://doi.org/10.1111/j.1365-2958.2010.07115.x		
 GcvB	b1130	phoP	NC_000913	Coornaert_Chiaruttini_Springer-Post_contr_the-2013	https://doi.org/10.1371/journal.pgen.1003156		
-CyaR	b0814	ompX	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08		
-CyaR	b1740	nadE	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08		
-CyaR	b2666	yqaE	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08		
-CyaR	b2687	luxS	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08		
+CyaR	b0814	ompX	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08		only sRNA mutated
+CyaR	b1740	nadE	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08	G38C,G29A,A40U&U-3A,C-2UA-1G	not mutated positions are complementary
+CyaR	b2666	yqaE	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08	G38C,G39A,A40U&C7G,U8U,A9U	
+CyaR	b2687	luxS	NC_000913	De_Lay:Gottesman:The_Crp_small:2009	https://doi.org/10.1128/JB.01157-08	A44U&U-7A	
 ArcZ	b1892	flhD	NC_000913	De_Lay_Gottesman-compl_netwo_small-2012	https://doi.org/10.1111/j.1365-2958.2012.08209.x		
 OxyS	b1892	flhD	NC_000913	De_Lay_Gottesman-compl_netwo_small-2012	https://doi.org/10.1111/j.1365-2958.2012.08209.x		
 RyhB	b2530	iscS	NC_000913	Desnoyers:Morissette:Prevost:Small_RNA_diffe:2009	https://dx.doi.org/10.1038/emboj.2009.116		
 RybB	b0721	sdhC	NC_000913	Desnoyers_Masse-Nonca_repre_trans-2012	https://doi.org/10.1101/gad.182493.111		
 RyhB	b0721	sdhC	NC_000913	Desnoyers_Masse-Nonca_repre_trans-2012	https://doi.org/10.1101/gad.182493.111		
 Spot42	b0721	sdhC	NC_000913	Desnoyers_Masse-Nonca_repre_trans-2012	https://doi.org/10.1101/gad.182493.111		
-FnrS	b0755	gpmA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x		
-FnrS	b1479	maeA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x		
-FnrS	b2153	folE	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x		
-FnrS	b2303	folX	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x		
+FnrS	b0755	gpmA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	C47A,U48A,U49G&A-6C,A-5U,G-4U	
+FnrS	b1479	maeA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	U57A,U57G,U57A&A-15U,A-14U,A-13U	
+FnrS	b2153	folE	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	G4C,G5U&C-13A,C-12G	
+FnrS	b2303	folX	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	G4C,G5U&C-6A,C-5G	
 MicA	b0411	tsx	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		
 MicA	b0814	ompX	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		
 RybB	b0805	fiu	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		
@@ -54,7 +54,9 @@ SgrS	b1101	ptsG	NC_000913	Kawamoto:Koide:Morita:Base_requi_for:2006	https://doi.
 DsrA	b1237	hns	NC_000913	Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998	pmid: 9770507 		
 DsrA	b2741	rpoS	NC_000913	Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998	pmid: 9770507 		
 RprA	b2741	rpoS	NC_000913	Majdalani:Hernandez:Gottesman:Regul_and_mode:2002	pmid: 12410838		
-ArcZ	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179		
+DsrA	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C42G&G-103C	
+RprA	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C16G&G-103C	
+ArcZ	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C70G&G-103C	
 ChiX	b0619	dpiB/citA	NC_000913	Mandin:Gottesman:genet_appro_for:2009	https://doi.org/10.1111/j.1365-2958.2009.06665.x		
 RprA	b1040	csgD	NC_000913	Mika_Busse_Possling-Targe_csgD_the-2012	https://dx.doi.org/10.1111/j.1365-2958.2012.08002.x		
 RprA	b1341	ydaM	NC_000913	Mika_Busse_Possling-Targe_csgD_the-2012	https://dx.doi.org/10.1111/j.1365-2958.2012.08002.x		
