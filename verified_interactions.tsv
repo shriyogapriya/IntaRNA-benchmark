@@ -132,19 +132,19 @@ GcvB	STM3564	livK	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	htt
 GcvB	STM3567	livJ	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
 GcvB	STM3630	dppA	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
 GcvB	STM4351	-	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
-GcvB	STM0002	thrA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM0245	metQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM0399	brnQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM0602	ybdH	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM0959	lrp	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM1299	gdhA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM1452	tppB	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM2526	ndk	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM3062	serA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM3064	iciA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM3225	ygjU/sstT	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM3903	ilvE	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM3909	ilvC	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
-GcvB	STM4398	cycA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		
+GcvB	STM0002	thrA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM0245	metQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM0399	brnQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM0602	ybdH	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM0959	lrp	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM1299	gdhA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM1452	tppB	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM2526	ndk	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM3062	serA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM3064	iciA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM3225	ygjU/sstT	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM3903	ilvE	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM3909	ilvC	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
+GcvB	STM4398	cycA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
 RybB	STM1530	-	NC_003197	Wright:Thesis:2012	http://www.bioinf.uni-freiburg.de/Publications/Wright:Thesis:2012.pdf		
 GcvB	STM3930	yifK	NC_003197	Yang_Figueroa-Bossi_Bossi-Trans_enhan_ACA-2014	https://dx.doi.org/10.1371/journal.pgen.1004026		
