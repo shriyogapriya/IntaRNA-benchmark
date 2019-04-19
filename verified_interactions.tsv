@@ -106,10 +106,8 @@ Spot42	b1761	gdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	
 RybB	STM0687	ybfM/chiP	NC_003197	Balbontin:Fiorini:Figueroa-Bossi:Recog_hepta_seed:2010	https://doi.org/10.1111/j.1365-2958.2010.07342.x	C5G&G14C|A4U&U15A	
 MicA	STM4231	lamB	NC_003197	Bossi:Figueroa-Bossi:small_RNA_downr:2007	https://doi.org/10.1111/j.1365-2958.2007.05829.x	A22C&U5G|A12G&U14C	
 RybB	STM1473	ompN	NC_003197	Bouvier:Sharma:Mika:Small_RNA_bindi:2008	https://doi.org/10.1016/j.molcel.2008.10.027		
-MicF	STM0366	yahO	NC_003197	Corcoran:Podkaminski:Papenfort:Super_GFP_repor:2012	https://doi.org/10.1111/j.1365-2958.2012.08031.x		
-MicF	STM0959	lrp	NC_003197	Corcoran:Podkaminski:Papenfort:Super_GFP_repor:2012	https://doi.org/10.1111/j.1365-2958.2012.08031.x		
-MicF	STM1328	lpxR	NC_003197	Corcoran:Podkaminski:Papenfort:Super_GFP_repor:2012	https://doi.org/10.1111/j.1365-2958.2012.08031.x		
-ChiX	STM0687	ybfM/chiP	NC_003197	Figueroa-Bossi:Valentini:Malleret:Caugh_its_own:2009	https://doi.org/10.1101/gad.541609		
+MicF	STM0366	yahO	NC_003197	Corcoran:Podkaminski:Papenfort:Super_GFP_repor:2012	https://doi.org/10.1111/j.1365-2958.2012.08031.x	C6G&G-31C	
+MicF	STM0959	lrp	NC_003197	Corcoran:Podkaminski:Papenfort:Super_GFP_repor:2012	https://doi.org/10.1111/j.1365-2958.2012.08031.x	C6G&G7C
 ChiX	STM1313	celB	NC_003197	Figueroa-Bossi:Valentini:Malleret:Caugh_its_own:2009	https://doi.org/10.1101/gad.541609		
 Spot42	STM2190	mglB	NC_003197	Holmqvist_Wright_Li-Globa_RNA_recog-2016	https://doi.org/10.15252/embj.201593360		
 RybB	STM0413	tsx	NC_003197	Papenfort:Bouvier:Mika:Evide_for_auton:PNAS2010	https://doi.org/10.1073/pnas.1009784107		
