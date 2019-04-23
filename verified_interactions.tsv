@@ -1,5 +1,5 @@
 sRNA	gene	geneName	organism	publication	doi	mutation-sRNA&gene	notes
-OxyS	b2731	fhlA	NC_000913	Altuvia_Zhang_Argaman-The_Esche_coli-1998	https://doi.org/10.1093/emboj/17.20.6069		
+OxyS	b2731	fhlA	NC_000913	Altuvia_Zhang_Argaman-The_Esche_coli-1998	https://doi.org/10.1093/emboj/17.20.6069		doubt in finding the position @martin
 Spot42	b0720	gltA	NC_000913	Beisel:Storz:The_Base_RNA:2011	https://doi.org/10.1016/j.molcel.2010.12.027		
 Spot42	b2702	srlA	NC_000913	Beisel:Storz:The_Base_RNA:2011	https://doi.org/10.1016/j.molcel.2010.12.027		
 Spot42	b2802	fucI	NC_000913	Beisel:Storz:The_Base_RNA:2011	https://doi.org/10.1016/j.molcel.2010.12.027		
