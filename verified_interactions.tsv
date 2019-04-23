@@ -120,9 +120,9 @@ RybB	STM2267	ompC	NC_003197	Papenfort:Bouvier:Mika:Evide_for_auton:PNAS2010	http
 RybB	STM2391	fadL	NC_003197	Papenfort:Bouvier:Mika:Evide_for_auton:PNAS2010	https://doi.org/10.1073/pnas.1009784107 C2G&G44C  need to check whether it is correct ,have some doubts @martin		
 CyaR	STM0833	ompX	NC_003197	Papenfort:Pfeiffer:Lucchini:Syste_delet_Salmo:2008	https://doi.org/10.1111/j.1365-2958.2008.06189.x	A43U&U-5A	
 SgrS	STM2945	sopD	NC_003197	Papenfort:Podkaminski:Hinton:The_ances_SgrS:PNAS2012	https://doi.org/10.1073/pnas.1119414109	G176C&C5G	
-ArcZ	STM1682	tpx	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		
-ArcZ	STM2970	sdaC	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		
-ArcZ	STM3216	-	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		
+ArcZ	STM1682	tpx	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C22G	
+ArcZ	STM2970	sdaC	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C-12G	
+ArcZ	STM3216	-	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		gene mut is not given @martin
 SgrS	STM3962	yigL	NC_003197	Papenfort_Sun_Miyakoshi-Small_RNA_activ-2013	https://doi.org/10.1016/j.cell.2013.03.003		
 MicC	STM1572	ompD	NC_003197	Pfeiffer:Papenfort:Lucchini:Codin_seque_targe:2009	https://doi.org/10.1038/nsmb.1631		
 GcvB	STM0665	gltI	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
