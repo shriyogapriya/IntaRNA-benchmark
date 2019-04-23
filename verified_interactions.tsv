@@ -122,8 +122,8 @@ CyaR	STM0833	ompX	NC_003197	Papenfort:Pfeiffer:Lucchini:Syste_delet_Salmo:2008	h
 SgrS	STM2945	sopD	NC_003197	Papenfort:Podkaminski:Hinton:The_ances_SgrS:PNAS2012	https://doi.org/10.1073/pnas.1119414109	G176C&C5G	
 ArcZ	STM1682	tpx	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C22G	
 ArcZ	STM2970	sdaC	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C-12G	
-ArcZ	STM3216	-	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		gene mut is not given @martin
-SgrS	STM3962	yigL	NC_003197	Papenfort_Sun_Miyakoshi-Small_RNA_activ-2013	https://doi.org/10.1016/j.cell.2013.03.003		mut not found @martin
+ArcZ	STM3216	-	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		gene name is not given @martin
+SgrS	STM3962	yigL	NC_003197	Papenfort_Sun_Miyakoshi-Small_RNA_activ-2013	https://doi.org/10.1016/j.cell.2013.03.003		mutation not found @martin
 MicC	STM1572	ompD	NC_003197	Pfeiffer:Papenfort:Lucchini:Codin_seque_targe:2009	https://doi.org/10.1038/nsmb.1631	C9G&G71C
 GcvB	STM0665	gltI	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		mutation not found @martin
 GcvB	STM1746	oppA	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		mutation not found @martin
@@ -131,7 +131,7 @@ GcvB	STM2355	argT	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	htt
 GcvB	STM3564	livK	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		mutation not found @martin
 GcvB	STM3567	livJ	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		mutation not found @martin
 GcvB	STM3630	dppA	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		mutation not found @martin
-GcvB	STM4351	-	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		gene mut not given @martin
+GcvB	STM4351	-	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		gene name not given @martin
 GcvB	STM0002	thrA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
 GcvB	STM0245	metQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
 GcvB	STM0399	brnQ	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
@@ -146,5 +146,5 @@ GcvB	STM3225	ygjU/sstT	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:20
 GcvB	STM3903	ilvE	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
 GcvB	STM3909	ilvC	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
 GcvB	STM4398	cycA	NC_003197	Sharma:Papenfort:Pernitzsch:Perva_post_contr:2011	https://doi.org/10.1111/j.1365-2958.2011.07751.x		validation via deletion of subsequence R1 or R2
-RybB	STM1530	-	NC_003197	Wright:Thesis:2012	http://www.bioinf.uni-freiburg.de/Publications/Wright:Thesis:2012.pdf		gene mut not found @martin
-GcvB	STM3930	yifK	NC_003197	Yang_Figueroa-Bossi_Bossi-Trans_enhan_ACA-2014	https://doi.org/10.1371/journal.pgen.1004026		
+RybB	STM1530	-	NC_003197	Wright:Thesis:2012	http://www.bioinf.uni-freiburg.de/Publications/Wright:Thesis:2012.pdf		gene name not given @martin
+GcvB	STM3930	yifK	NC_003197	Yang_Figueroa-Bossi_Bossi-Trans_enhan_ACA-2014	https://doi.org/10.1371/journal.pgen.1004026	U84G&A50C|G85A&C49U|U86A&A48U|U87C&A47G|U88A&A46U	
