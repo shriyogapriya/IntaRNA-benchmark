@@ -123,7 +123,7 @@ SgrS	STM2945	sopD	NC_003197	Papenfort:Podkaminski:Hinton:The_ances_SgrS:PNAS2012
 ArcZ	STM1682	tpx	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C22G	
 ArcZ	STM2970	sdaC	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x	G70C&C-12G	
 ArcZ	STM3216	-	NC_003197	Papenfort:Said:Welsink:Speci_and_pleio:2009	https://doi.org/10.1111/j.1365-2958.2009.06857.x		gene mut is not given @martin
-SgrS	STM3962	yigL	NC_003197	Papenfort_Sun_Miyakoshi-Small_RNA_activ-2013	https://doi.org/10.1016/j.cell.2013.03.003		
+SgrS	STM3962	yigL	NC_003197	Papenfort_Sun_Miyakoshi-Small_RNA_activ-2013	https://doi.org/10.1016/j.cell.2013.03.003		mut not found @martin
 MicC	STM1572	ompD	NC_003197	Pfeiffer:Papenfort:Lucchini:Codin_seque_targe:2009	https://doi.org/10.1038/nsmb.1631		
 GcvB	STM0665	gltI	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
 GcvB	STM1746	oppA	NC_003197	Sharma:Darfeuille:Plantinga:small_RNA_regul:2007	https://doi.org/10.1101/gad.447207		
