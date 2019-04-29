@@ -40,7 +40,7 @@ FnrS	b0755	gpmA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10
 FnrS	b1479	maeA	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	U57A,U57G,U57A&A-15U,A-14U,A-13U	
 FnrS	b2153	folE	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	G4C,G5U&C-13A,C-12G	
 FnrS	b2303	folX	NC_000913	Durand:Storz:Repro_anaer_metab:2010	https://doi.org/10.1111/j.1365-2958.2010.07044.x	G4C,G5U&C-6A,C-5G	
-MicA	b0411	tsx	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		DOUBT @MARTIN
+MicA	b0411	tsx	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		check only for mica and tsx leave mut2 @MARTIN
 MicA	b0814	ompX	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108	C7G&G17C	
 RybB	b0805	fiu	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		C2G&G-71C
 RybB	b2594	rluD	NC_000913	Gogol:Rhodius:Papenfort:Small_RNAs_endow:PNAS2011	https://doi.org/10.1073/pnas.1109379108		C2G&G4C
