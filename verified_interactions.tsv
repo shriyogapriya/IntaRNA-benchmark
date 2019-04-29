@@ -54,7 +54,7 @@ McaS	b1040	csgD	NC_000913	Jorgensen_Nielsen_Boysen-Small_regul_RNAs-2012	https:/
 SgrS	b1101	ptsG	NC_000913	Kawamoto:Koide:Morita:Base_requi_for:2006	https://doi.org/10.1111/j.1365-2958.2006.05288.x		MUTATION NOT FOUND @MARTIN
 DsrA	b1237	hns	NC_000913	Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998	https://doi.org/10.1073/pnas.95.21.12456 		non consequtive comp. mut @MARTIN
 DsrA	b2741	rpoS	NC_000913	Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998	https://doi.org/10.1073/pnas.95.21.12456 		non consequtive comp. mut @MARTIN
-RprA	b2741	rpoS	NC_000913	Majdalani:Hernandez:Gottesman:Regul_and_mode:2002	https://doi.org/10.1046/j.1365-2958.2002.03203.x		MUTATION NOT FOUND @MARTIN
+RprA	b2741	rpoS	NC_000913	Majdalani:Hernandez:Gottesman:Regul_and_mode:2002	https://doi.org/10.1046/j.1365-2958.2002.03203.x		Long comp. MUTATION @MARTIN
 DsrA	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C42G&G-103C	
 RprA	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C16G&G-103C	
 ArcZ	b2741	rpoS	NC_000913	Mandin:Gottesman:Integ_anaer_sensi:2010	https://doi.org/10.1038/emboj.2010.179	C70G&G-103C	
