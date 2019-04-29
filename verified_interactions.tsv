@@ -22,7 +22,7 @@ FnrS	b1841	yobA	NC_000913	Boysen:Moller-Jensen:Kallipolitis:Trans_regul_gene:JBC
 FnrS	b3829	metE	NC_000913	Boysen:Moller-Jensen:Kallipolitis:Trans_regul_gene:JBC2010	https://doi.org/10.1074/jbc.M109.089755		Mutation not found @martin
 FnrS	b3908	sodA	NC_000913	Boysen:Moller-Jensen:Kallipolitis:Trans_regul_gene:JBC2010	https://doi.org/10.1074/jbc.M109.089755		Mutation not found @martin
 DsrA	b3251	mreB	NC_000913	Cayrol_Fortas_Martret-Ribor_the_bacte-2015	https://doi.org/10.1039/c4ib00102h		mutation not found @martin
-MicC	b2215	ompC	NC_000913	Chen:Zhang:Blyn:MicC_secon_small:2004	https://doi.org/10.1128/JB.186.20.6689-6697.2004	mutation not found @priya
+MicC	b2215	ompC	NC_000913	Chen:Zhang:Blyn:MicC_secon_small:2004	https://doi.org/10.1128/JB.186.20.6689-6697.2004	mutation not found @martin
 Spot42	b1901	araF	NC_000913	Chen_Gottesman-Spot_sRNA_regul-2016	https://doi.org/10.1128/JB.00691-16	G5A&C-34U|G6C&C-35G|U7G&G-36U	
 MicA	b1130	phoP	NC_000913	Coornaert:Lu:Mandin:MicA_sRNA_links:2010	https://doi.org/10.1111/j.1365-2958.2010.07115.x	C7G&G4C|G8C&C5G|C9G&G6C|G10C&C7G	 Mut position diuble check @martin
 GcvB	b1130	phoP	NC_000913	Coornaert_Chiaruttini_Springer-Post_contr_the-2013	https://doi.org/10.1371/journal.pgen.1003156		doubt in finding mutation @martin
