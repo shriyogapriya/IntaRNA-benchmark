@@ -87,22 +87,22 @@ RyhB	b2206	napA	NC_000913	Wang_Rennie_Liu-Ident_bacte_sRNA-NAR2015	https://doi.o
 RyhB	b3942	katG	NC_000913	Wang_Rennie_Liu-Ident_bacte_sRNA-NAR2015	https://doi.org/10.1093/nar/gkv1158		MUTATION NOT FOUND @Martin
 RyhB	b4070	nrfA	NC_000913	Wang_Rennie_Liu-Ident_bacte_sRNA-NAR2015	https://doi.org/10.1093/nar/gkv1158		MUTATION NOT FOUND @Martin
 RyhB	b4122	fumB	NC_000913	Wang_Rennie_Liu-Ident_bacte_sRNA-NAR2015	https://doi.org/10.1093/nar/gkv1158		MUTATION NOT FOUND @Martin
-CyaR	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
+CyaR	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
 CyaR	b1824	yobF	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-CyaR	b2416	ptsI	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-FnrS	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-FnrS	b1107	nagZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-FnrS	b1531	marA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
+CyaR	b2416	ptsI	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+FnrS	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+FnrS	b1107	nagZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+FnrS	b1531	marA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		single mutation @martin 
 FnrS	b2531	iscR	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-RybB	b0081	mraZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-RyhB	b0156	erpA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-RyhB	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-RyhB	b1107	nagZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-RyhB	b1531	marA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
+RybB	b0081	mraZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+RyhB	b0156	erpA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		single mutation @martin 
+RyhB	b0723	sdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+RyhB	b1107	nagZ	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+RyhB	b1531	marA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		single mutation @martin 
 RyhB	b3365	nirB	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-SgrS	b2416	ptsI	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-Spot42	b0728	sucC	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
-Spot42	b1136	icd	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
+SgrS	b2416	ptsI	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
+Spot42	b0728	sucC	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		single muatation @martin 
+Spot42	b1136	icd	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		MUTATION NOT FOUND @Martin 
 Spot42	b1761	gdhA	NC_000913	Wright_Richter_Papenfort-Compa_genom_boost-PNAS2013	https://doi.org/10.1073/pnas.1303248110		todo check in suppl. @martin 
 RybB	STM0687	ybfM/chiP	NC_003197	Balbontin:Fiorini:Figueroa-Bossi:Recog_hepta_seed:2010	https://doi.org/10.1111/j.1365-2958.2010.07342.x	C5G&G14C|A4U&U15A	
 MicA	STM4231	lamB	NC_003197	Bossi:Figueroa-Bossi:small_RNA_downr:2007	https://doi.org/10.1111/j.1365-2958.2007.05829.x	A22C&U5G|A12G&U14C	
