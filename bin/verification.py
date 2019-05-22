@@ -36,7 +36,7 @@ def getMutationgene():
     for index, element in enumerate(rows):
         if(len(element) > 6):
             if element[6] != '':
-                if( '@' not in element[6]): # To remove data where it says @martin. Clean the tsv please
+                if( '@' not in element[6]): # To remove data where it says @martin. 
                     sRNAFile.append(element[0])
                     geneFile.append(element[1])
                     organismFolder.append(element[3])
