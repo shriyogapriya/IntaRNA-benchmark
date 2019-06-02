@@ -36,7 +36,7 @@ def getMutationgene():
     for index, element in enumerate(rows):
         if(len(element) > 6):
             if element[6] != '':
-                if( '@' not in element[6]): # To remove data where it says @martin. 
+                if( '@' not in element[6]): 
                     sRNAFile.append(element[0])
                     geneFile.append(element[1])
                     organismFolder.append(element[3])
@@ -93,9 +93,10 @@ def processLoop():
     for index, record in enumerate(sRNAGene):
         mutation = sRNAGene[record].get("mutation")
         if ("|" in mutation):
+            print("\n Multiple Evaluations using : \t", mutation)
             multiEval = mutation.split("|")
             for index , element in enumerate(multiEval):
-                sRNACheck, geneCheck = element.split('&', 1)
+                geneCheck, sRNACheck = element.split('&', 1)
                 if("-" in sRNACheck):
                     print("Negative Position Encountered in sRNA check")
                 elif("-" in geneCheck):
@@ -106,7 +107,7 @@ def processLoop():
         elif ("," in mutation):
             print("\n Mutation with Bar ',' : \t", mutation)
         else:
-            sRNACheck, geneCheck = mutation.split('&', 1)
+            geneCheck, sRNACheck = mutation.split('&', 1)
             if("-" in sRNACheck):
                 print("Negative Position Encountered in sRNA check")
             elif("-" in geneCheck):
@@ -116,30 +117,63 @@ def processLoop():
                 boolsGene(geneCheck, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
 
 
-
-
-
 def boolsRNA(checkMut, sequence, name):
     position = int(re.findall(r'\d+', checkMut)[0])
-    checkWhat = checkMut[0].upper()
-    if checkWhat == "U":
-        checkWhat = "T"
-    fromSeq = sequence[position].upper()
-    if fromSeq == checkWhat:
-        print("\n  To check ",checkWhat," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+    base_1 = checkMut[0].upper()
+    base_2 = checkMut[-1].upper()
+    if base_1 == "U":
+        base_1 = "T"
+    if len(sequence) > position:
+        fromSeq = sequence[position-1].upper()
+        if fromSeq == base_1:
+            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+            complementBase(base_1, base_2)
+        else :
+            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+            complementBase(base_1, base_2)
     else :
-        print("\n  To check ",checkWhat," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+        print("Check for Typo as Sequence is shorter than specified index to check in file", name)
+        print("Lenght of Sequence : \t",len(sequence))
+        print("Encountered position to find : \t", position)
 
 def boolsGene(checkMut, sequence, name):
     position = int(re.findall(r'\d+', checkMut)[0])
-    checkWhat = checkMut[0].upper()
-    if checkWhat == "U":
-        checkWhat = "T"
-    fromSeq = sequence[position].upper()
-    if fromSeq == checkWhat:
-        print("\n  To check ",checkWhat," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+    base_1 = checkMut[0].upper()
+    base_2 = checkMut[-1].upper()
+    if base_1 == "U":
+        base_1 = "T"
+    if len(sequence) > position:
+        fromSeq = sequence[position-1].upper()
+        if fromSeq == base_1:
+            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+            complementBase(base_1, base_2)
+        else :
+            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+            complementBase(base_1, base_2)
     else :
-        print("\n  To check ",checkWhat," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+        print("Check for Typo as Sequence is shorter than specified index to check in file", name)
+        print("Lenght of Sequence : \t",len(sequence))
+        print("Encountered position to find : \t", position)
+
+""" Watson-crick Method for finding Gene complement """
+def complementBase(base_1, base_2):
+    G = "G"
+    C = "C"
+    A = "A"
+    U = "U"
+    T = "T"
+
+    if base_1 == T:
+        base_1 =  U
+    elif base_2 == T:
+        base_2 =  U
+
+    if ((base_1 == C and base_2 == G) or (base_1 == G and base_2 == C)):
+        print("Gene complement matched", base_1, " <-> ", base_2)
+    elif ((base_1 == A and base_2 == U) or (base_1 == U and base_2 == A)):
+        print("Gene complement matched", base_1, " <-> ", base_2)
+    else:
+        print("Gene complement mismatched", base_1, " <-> ", base_2)
 
 
 """ Run this only when you want to update the data  """
