@@ -36,7 +36,7 @@ def getMutationgene():
     for index, element in enumerate(rows):
         if(len(element) > 6):
             if element[6] != '':
-                if( '@' not in element[6]): 
+                if( '@' not in element[6]):
                     sRNAFile.append(element[0])
                     geneFile.append(element[1])
                     organismFolder.append(element[3])
@@ -92,29 +92,37 @@ def processLoop():
     sRNAGene = readData()
     for index, record in enumerate(sRNAGene):
         mutation = sRNAGene[record].get("mutation")
+
         if ("|" in mutation):
             print("\n Multiple Evaluations using : \t", mutation)
             multiEval = mutation.split("|")
             for index , element in enumerate(multiEval):
                 geneCheck, sRNACheck = element.split('&', 1)
                 if("-" in sRNACheck):
-                    print("Negative Position Encountered in sRNA check")
+                    # print("Negative Position Encountered in sRNA check")
+                    print()
                 elif("-" in geneCheck):
-                    print("Negative Position encountered in genecheck")
+                    # print("Negative Position encountered in genecheck")
+                    print()
                 else:
                     boolsRNA(sRNACheck, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
                     boolsGene(geneCheck, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                    complementBase(sRNACheck, geneCheck)
+
         elif ("," in mutation):
             print("\n Mutation with Bar ',' : \t", mutation)
         else:
             geneCheck, sRNACheck = mutation.split('&', 1)
             if("-" in sRNACheck):
-                print("Negative Position Encountered in sRNA check")
+                # print("Negative Position Encountered in sRNA check")
+                print()
             elif("-" in geneCheck):
-                print("Negative Position encountered in genecheck")
+                # print("Negative Position encountered in genecheck")
+                print()
             else:
                 boolsRNA(sRNACheck, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
                 boolsGene(geneCheck, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                complementBase(sRNACheck, geneCheck)
 
 
 def boolsRNA(checkMut, sequence, name):
@@ -126,11 +134,12 @@ def boolsRNA(checkMut, sequence, name):
     if len(sequence) > position:
         fromSeq = sequence[position-1].upper()
         if fromSeq == base_1:
-            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
-            complementBase(base_1, base_2)
+            print()
+            # print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+            # complementBase(base_1, base_2)
         else :
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
-            complementBase(base_1, base_2)
+            # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
         print("Lenght of Sequence : \t",len(sequence))
@@ -145,44 +154,57 @@ def boolsGene(checkMut, sequence, name):
     if len(sequence) > position:
         fromSeq = sequence[position-1].upper()
         if fromSeq == base_1:
-            print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
-            complementBase(base_1, base_2)
+            print()
+            # print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
+            # complementBase(base_1, base_2)
         else :
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
-            complementBase(base_1, base_2)
+            # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
         print("Lenght of Sequence : \t",len(sequence))
         print("Encountered position to find : \t", position)
 
 """ Watson-crick Method for finding Gene complement """
-def complementBase(base_1, base_2):
+def complementBase(before, after):
+    print(before, after)
+    b_check_1 = before[0].upper()
+    a_check_1 = after[0].upper()
+    b_check_2 = before[-1].upper()
+    a_check_2 = after[-1].upper()
+    check = [b_check_1, a_check_1, b_check_2 , a_check_2]
     G = "G"
     C = "C"
     A = "A"
     U = "U"
     T = "T"
 
-    if base_1 == T:
-        base_1 =  U
-    elif base_2 == T:
-        base_2 =  U
+    for element in check:
+        if element == T:
+            element = U
 
-    if ((base_1 == C and base_2 == G) or (base_1 == G and base_2 == C)):
-        print("Gene complement matched", base_1, " <-> ", base_2)
-    elif ((base_1 == A and base_2 == U) or (base_1 == U and base_2 == A)):
-        print("Gene complement matched", base_1, " <-> ", base_2)
+    if ((b_check_1 == C and a_check_1 == G) or (b_check_1 == G and a_check_1 == C)):
+        print("Gene complement matched", b_check_1, " <-> ", a_check_1)
+    elif ((b_check_1 == A and a_check_1 == U) or (b_check_1 == U and a_check_1 == A)):
+        print("Gene complement matched", b_check_1, " <-> ", a_check_1)
     else:
-        print("Gene complement mismatched", base_1, " <-> ", base_2)
+        print("Gene complement mismatched", b_check_1, " <-!WRONG!-> ", a_check_1)
+
+    if ((b_check_2 == C and a_check_2 == G) or (b_check_2 == G and a_check_2 == C)):
+        print("Gene complement matched", b_check_2, " <-> ", a_check_2)
+    elif ((b_check_2 == A and a_check_2 == U) or (b_check_2 == U and a_check_2 == A)):
+        print("Gene complement matched", b_check_2, " <-> ", a_check_2)
+    else:
+        print("Gene complement mismatched", b_check_2, " <-!WRONG!-> ", a_check_2)
 
 
 """ Run this only when you want to update the data  """
 
-# parseFiletsv()
-# getMutationgene()
-# getSRNA()
-# getGene()
-# saveFile()
+parseFiletsv()
+getMutationgene()
+getSRNA()
+getGene()
+saveFile()
 
 
 
@@ -190,6 +212,6 @@ def complementBase(base_1, base_2):
 # readData()
 
 """ Entry point for the Application. """
-processLoop()
+# processLoop()
 
 
