@@ -16,9 +16,9 @@ organismFolder = []
 mutation = []
 geneFile = []
 sRNAFile = []
-
-
 sRNAGene = {}
+
+constToCheck = 200
 
 """ parses the tsv file and gets the tabular data inside an arraz named <rows> """
 def parseFiletsv():
@@ -97,32 +97,24 @@ def processLoop():
             print("\n Multiple Evaluations using : \t", mutation)
             multiEval = mutation.split("|")
             for index , element in enumerate(multiEval):
-                geneCheck, sRNACheck = element.split('&', 1)
-                if("-" in sRNACheck):
-                    # print("Negative Position Encountered in sRNA check")
-                    print()
-                elif("-" in geneCheck):
-                    # print("Negative Position encountered in genecheck")
-                    print()
+                part_1, part_2, = element.split('&', 1)
+                if("-" in part_2):
+                    negGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
                 else:
-                    boolsRNA(sRNACheck, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
-                    boolsGene(geneCheck, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
-                    complementBase(sRNACheck, geneCheck)
+                    boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
+                    boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                    complementBase(part_2, part_1)
 
         elif ("," in mutation):
             print("\n Mutation with Bar ',' : \t", mutation)
         else:
-            geneCheck, sRNACheck = mutation.split('&', 1)
-            if("-" in sRNACheck):
-                # print("Negative Position Encountered in sRNA check")
-                print()
-            elif("-" in geneCheck):
-                # print("Negative Position encountered in genecheck")
-                print()
+            part_1, part_2 = mutation.split('&', 1)
+            if("-" in part_2):
+                negGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
             else:
-                boolsRNA(sRNACheck, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
-                boolsGene(geneCheck, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
-                complementBase(sRNACheck, geneCheck)
+                boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
+                boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                complementBase(part_2, part_1)
 
 
 def boolsRNA(checkMut, sequence, name):
@@ -165,6 +157,17 @@ def boolsGene(checkMut, sequence, name):
         print("Lenght of Sequence : \t",len(sequence))
         print("Encountered position to find : \t", position)
 
+def negGene(checkMut, sequence, name):
+    seqLen = len(sequence)
+    position = int(re.findall(r'\d+', checkMut)[0])
+    if position < constToCheck:
+        position = constToCheck + (-position)
+    elif position > constToCheck:
+        position = constToCheck + position - 1
+    newMut = checkMut[0].upper()+str(position)+checkMut[-1].upper()
+    boolsGene(newMut, sequence, name)
+
+
 """ Watson-crick Method for finding Gene complement """
 def complementBase(before, after):
     print(before, after)
@@ -200,11 +203,11 @@ def complementBase(before, after):
 
 """ Run this only when you want to update the data  """
 
-parseFiletsv()
-getMutationgene()
-getSRNA()
-getGene()
-saveFile()
+# parseFiletsv()
+# getMutationgene()
+# getSRNA()
+# getGene()
+# saveFile()
 
 
 
@@ -212,6 +215,6 @@ saveFile()
 # readData()
 
 """ Entry point for the Application. """
-# processLoop()
+processLoop()
 
 
