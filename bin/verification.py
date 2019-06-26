@@ -2,6 +2,7 @@ import csv
 from Bio import SeqIO
 import json
 import re
+import sys 
 
 
 filename = 'verified_interactions.tsv'
@@ -94,7 +95,7 @@ def processLoop():
         mutation = sRNAGene[record].get("mutation")
 
         if ("|" in mutation):
-            print("\n Multiple Evaluations using : \t", mutation)
+            print("\n\n Multiple Evaluations using : \t", mutation)
             multiEval = mutation.split("|")
             for index , element in enumerate(multiEval):
                 part_1, part_2, = element.split('&', 1)
@@ -106,7 +107,7 @@ def processLoop():
                     complementBase(part_2, part_1)
 
         elif ("," in mutation):
-            print("\n Mutation with Bar ',' : \t", mutation)
+            print("\n\n Mutation with Bar ',' : \t", mutation)
         else:
             part_1, part_2 = mutation.split('&', 1)
             if("-" in part_2):
@@ -131,6 +132,7 @@ def boolsRNA(checkMut, sequence, name):
             # complementBase(base_1, base_2)
         else :
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+            sys.exit()
             # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
@@ -151,6 +153,7 @@ def boolsGene(checkMut, sequence, name):
             # complementBase(base_1, base_2)
         else :
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
+            sys.exit()
             # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
@@ -164,7 +167,7 @@ def negGene(checkMut, sequence, name):
         position = constToCheck + (-position)
     elif position > constToCheck:
         position = constToCheck + position - 1
-    newMut = checkMut[0].upper()+str(position)+checkMut[-1].upper()
+    newMut = checkMut[0].upper()+str(position)+checkMut[1].upper()
     boolsGene(newMut, sequence, name)
 
 
