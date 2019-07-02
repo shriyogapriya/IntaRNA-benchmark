@@ -99,12 +99,12 @@ def processLoop():
             multiEval = mutation.split("|")
             for index , element in enumerate(multiEval):
                 part_1, part_2, = element.split('&', 1)
-                if("-" in part_2):
-                    negGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
-                else:
-                    boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
-                    boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
-                    complementBase(part_2, part_1)
+#                if("-" in part_2):
+#                    negGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+#                else:
+                boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
+                boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                complementBase(part_2, part_1)
 
         elif ("," in mutation):
             print("\n\n Mutation with Bar ',' : \t", mutation)
@@ -140,7 +140,9 @@ def boolsRNA(checkMut, sequence, name):
         print("Encountered position to find : \t", position)
 
 def boolsGene(checkMut, sequence, name):
-    position = int(re.findall(r'\d+', checkMut)[0])
+    position = constToCheck + int(re.findall(r'-?\d+', checkMut)[0])
+    if (position < constToCheck):
+        position += 1
     base_1 = checkMut[0].upper()
     base_2 = checkMut[-1].upper()
     if base_1 == "U":
@@ -162,12 +164,8 @@ def boolsGene(checkMut, sequence, name):
 
 def negGene(checkMut, sequence, name):
     seqLen = len(sequence)
-    position = int(re.findall(r'\d+', checkMut)[0])
-    if position < constToCheck:
-        position = constToCheck + (-position)
-    elif position > constToCheck:
-        position = constToCheck + position - 1
-    newMut = checkMut[0].upper()+str(position)+checkMut[1].upper()
+    position = constToCheck + int(re.findall(r'-*\d+', checkMut)[0]) +1
+    newMut = checkMut[0].upper()+str(position)+checkMut[-1].upper()
     boolsGene(newMut, sequence, name)
 
 
@@ -189,28 +187,30 @@ def complementBase(before, after):
         if element == T:
             element = U
 
-    if ((b_check_1 == C and a_check_1 == G) or (b_check_1 == G and a_check_1 == C)):
+    if (((b_check_1 == C or b_check_1 == U) and a_check_1 == G) or (b_check_1 == G and (a_check_1 == C or a_check_1 == U))):
         print("Gene complement matched", b_check_1, " <-> ", a_check_1)
     elif ((b_check_1 == A and a_check_1 == U) or (b_check_1 == U and a_check_1 == A)):
         print("Gene complement matched", b_check_1, " <-> ", a_check_1)
     else:
         print("Gene complement mismatched", b_check_1, " <-!WRONG!-> ", a_check_1)
+        exit(-1)
 
-    if ((b_check_2 == C and a_check_2 == G) or (b_check_2 == G and a_check_2 == C)):
+    if (((b_check_2 == C or b_check_2 == U) and a_check_2 == G) or (b_check_2 == G and (a_check_2 == C or a_check_2 == U))):
         print("Gene complement matched", b_check_2, " <-> ", a_check_2)
     elif ((b_check_2 == A and a_check_2 == U) or (b_check_2 == U and a_check_2 == A)):
         print("Gene complement matched", b_check_2, " <-> ", a_check_2)
     else:
         print("Gene complement mismatched", b_check_2, " <-!WRONG!-> ", a_check_2)
+        exit(-1)
 
 
 """ Run this only when you want to update the data  """
 
-# parseFiletsv()
-# getMutationgene()
-# getSRNA()
-# getGene()
-# saveFile()
+parseFiletsv()
+getMutationgene()
+getSRNA()
+getGene()
+saveFile()
 
 
 
