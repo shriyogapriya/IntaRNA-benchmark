@@ -5,7 +5,7 @@
 "Spot42"	"b2802"	"fucI"	"NC_000913"	"Beisel:Storz:The_Base_RNA:2011"	"https://doi.org/10.1016/j.molcel.2010.12.027"		"only SRNA mutation found @martin (spf - spot42 same)"
 "Spot42"	"b3566"	"xylF"	"NC_000913"	"Beisel:Storz:The_Base_RNA:2011"	"https://doi.org/10.1016/j.molcel.2010.12.027"		"only SRNA mutation found @martin (spf - spot42 same)"
 "Spot42"	"b3962"	"sthA"	"NC_000913"	"Beisel:Storz:The_Base_RNA:2011"	"https://doi.org/10.1016/j.molcel.2010.12.027"	"G49C&C21G|U50A&A20U|A51U&U19A"	
-"Spot42"	"b4311"	"nanC"	"NC_000913"	"Beisel:Storz:The_Base_RNA:2011"	"https://doi.org/10.1016/j.molcel.2010.12.027"		multiple start codon found."G5A&C-20U|G6C&U-21G|U7G&A-22C""orignal gene coordinates for alternative start codon G5A&C-11U|G6C&U-12G|U7G&A-13C"
+"Spot42"	"b4311"	"nanC"	"NC_000913"	"Beisel:Storz:The_Base_RNA:2011"	"https://doi.org/10.1016/j.molcel.2010.12.027"	"G5A&C-20U|G6C&U-21G|U7G&A-22C"	"orignal gene coordinates for alternative start codon G5A&C-11U|G6C&U-12G|U7G&A-13C"
 "Spot42"	"b0039"	"caiA"	"NC_000913"	"Beisel_Updegrove_Janson-Multi_facto_dicta-2012"	"https://doi.org/10.1038/emboj.2012.52      "		"mutation detail not found @martin (spf - spot42 same)"
 "Spot42"	"b1302"	"puuE"	"NC_000913"	"Beisel_Updegrove_Janson-Multi_facto_dicta-2012"	"https://doi.org/10.1038/emboj.2012.52  "		"mutation detail not found @martin (spf - spot42 same)"
 "Spot42"	"b1398"	"paaK"	"NC_000913"	"Beisel_Updegrove_Janson-Multi_facto_dicta-2012"	"https://doi.org/10.1038/emboj.2012.52"		"mutation detail not found @martin (spf - spot42 same) "
