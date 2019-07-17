@@ -52,7 +52,7 @@
 "GcvB"	"b1040"	"csgD"	"NC_000913"	"Jorgensen_Nielsen_Boysen-Small_regul_RNAs-2012"	"https://doi.org/10.1111/j.1365-2958.2012.07976.x"		"no comp. mutation"
 "McaS"	"b1040"	"csgD"	"NC_000913"	"Jorgensen_Nielsen_Boysen-Small_regul_RNAs-2012"	"https://doi.org/10.1111/j.1365-2958.2012.07976.x   "		"TODO csgD 5′‐UTR (A63G64U65G66 to U63C64A65C66) [see supplement S3C and find AUG-related positions] and McaS (C42A43C44U45 to G42U43G44A45) [Fig4b]"
 "SgrS"	"b1101"	"ptsG"	"NC_000913"	"Kawamoto:Koide:Morita:Base_requi_for:2006"	"https://doi.org/10.1111/j.1365-2958.2006.05288.x"		"TODO [Fig7B] ptsG (C85G - find AUG-relative position via Fig2)  sgrs (g178c)"
-"DsrA"	"b1237"	"hns"	"NC_000913"	"Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998"	"https://doi.org/10.1073/pnas.95.21.12456 "		"non consequtive comp. mut
+"DsrA"	"b1237"	"hns"	"NC_000913"	"Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998"	"https://doi.org/10.1073/pnas.95.21.12456 "		"non consequtive comp. mut"
 "DsrA"	"b2741"	"rpoS"	"NC_000913"	"Lease:Cusick:Belfort:Ribor_Esche_coli:PNAS1998"	"https://doi.org/10.1073/pnas.95.21.12456 "		"non consequtive comp. mut"
 "RprA"	"b2741"	"rpoS"	"NC_000913"	"Majdalani:Hernandez:Gottesman:Regul_and_mode:2002"	"https://doi.org/10.1046/j.1365-2958.2002.03203.x"		"non-symmetric compensatory mutation"
 "DsrA"	"b2741"	"rpoS"	"NC_000913"	"Mandin:Gottesman:Integ_anaer_sensi:2010"	"https://doi.org/10.1038/emboj.2010.179"	"C16G&G-103C"	
