@@ -85,24 +85,11 @@ def getSRNA():
 
 
 
-""" Save final sRNAGENE data file """
-def saveFile():
-    with open('sRNAGeneComplete.json', 'w') as outfile:  
-        json.dump(sRNAGene, outfile)
-
-""" Get Data from file fropm previous run """
-def readData():
-    with open('sRNAGeneComplete.json') as json_file:  
-        retThis = json.load(json_file)
-        print("Data Imported Succesfully!")
-        return retThis
-
     
 
 
 """ Main process loop for checking and evaluating based on mutation"""
 def processLoop():
-    sRNAGene = readData()
     for index, record in enumerate(sRNAGene):
         mutation = sRNAGene[record].get("mutation")
 
@@ -221,12 +208,6 @@ parseFiletsv()
 getMutationgene()
 getSRNA()
 getGene()
-saveFile()
-
-
-
-""" Read existing data from json file. """
-# readData()
 
 """ Entry point for the Application. """
 processLoop()
