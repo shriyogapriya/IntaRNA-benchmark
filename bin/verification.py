@@ -31,7 +31,7 @@ geneFile = []
 sRNAFile = []
 sRNAGene = {}
 
-constToCheck = 200    #magic constant 200 for gene position matching
+upstreamAUG = 200    # number of 5' upstream positions from start codon present in each target sequence
 
 """ parses the tsv file and gets the tabular data inside an array named <rows> """
 def parseFiletsv():
@@ -150,8 +150,8 @@ def boolsRNA(checkMut, sequence, name):
 
 "Gene Check"
 def boolsGene(checkMut, sequence, name):
-    position = constToCheck + int(re.findall(r'-?\d+', checkMut)[0])
-    if (position < constToCheck):
+    position = upstreamAUG + int(re.findall(r'-?\d+', checkMut)[0])
+    if (position < upstreamAUG):
         position += 1
     base_1 = checkMut[0].upper()
     base_2 = checkMut[-1].upper()
@@ -175,7 +175,7 @@ def boolsGene(checkMut, sequence, name):
 "negative indices in sRNA"
 def negGene(checkMut, sequence, name):
     seqLen = len(sequence)
-    position = constToCheck + int(re.findall(r'-*\d+', checkMut)[0]) +1
+    position = upstreamAUG + int(re.findall(r'-*\d+', checkMut)[0]) +1
     newMut = checkMut[0].upper()+str(position)+checkMut[-1].upper()
     boolsGene(newMut, sequence, name)
 
