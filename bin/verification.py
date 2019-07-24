@@ -7,12 +7,10 @@ Then, take the input folder (with sequence fasta data) from input.
 3a)report mutation is checked (for debugging and logging)
 4)checks each mutated position if the encoded letter matches the respective letter from the sRNA/target sequence (if not,it reports an error message)
 5)check complementarity of nucleotides before and after mutation, i.e. ensure that they can form a base pair.
-"magic constant 200" has been setup for gene position matching a global constant.
  """
 
 import csv
 from Bio import SeqIO
-import json
 import re
 import sys 
 
