@@ -19,7 +19,10 @@ filename = 'verified_interactions.tsv'
 column_name = 'mutation-sRNA&gene' # 6
 fileformat = ".fasta"
 
-
+# regSingle = r'[ACGU]\d+[ACGU]&[ACGU]-?\d+[ACGU]'
+# regMulti = 'regSingle(|regSingle)*'
+# regAlt = 'regMulti(,regMulti)*'
+# regCheck = '^\s* regAlt \s*$'   
 
 rows = []
 column_names = []
@@ -60,7 +63,7 @@ def getMutationgene():
 """ gets the mutation gene file in the given geneDirectory """
 def getGene():
     for index, element in enumerate(geneFile):
-        fasta_sequences = SeqIO.parse(open("input/"+organismFolder[index]+"/target/"+organismFolder[index]+".fa"),'fasta')
+        fasta_sequences = SeqIO.parse(open("input/"+organismFolder[index]+"/target/"+organismFolder[index]+".fa"),'fasta')  #GeneDirectory location path
         for Jindex, fasta in enumerate(fasta_sequences):
             if(element == fasta.name):
                 fastaSequence = fasta.seq
@@ -75,7 +78,7 @@ def getGene():
 def getSRNA():
     for index, element in enumerate(sRNAFile):
         completeFileName = element+"_"+organismFolder[index]+fileformat
-        fasta_sequences = SeqIO.parse(open("input/"+organismFolder[index]+"/query/"+completeFileName),'fasta')
+        fasta_sequences = SeqIO.parse(open("input/"+organismFolder[index]+"/query/"+completeFileName),'fasta')  #SrnaDirectory location path
         for fasta in fasta_sequences:
             fastaSequence = fasta.seq
             fastaSeqCharArray = str(fastaSequence).split(",")[0] # Convert to string array for checkig easy purpose. for index wise search.
@@ -90,53 +93,50 @@ def getSRNA():
 def processLoop():
     for index, record in enumerate(sRNAGene):
         mutation = sRNAGene[record].get("mutation")
+        regSingle = '[ACGU]\d+[ACGU]&[ACGU]-?\d+[ACGU]'
+        regMulti = regSingle+'(\|'+regSingle+')*'
+        regAlt = regMulti#+'(,'+regMulti+')*'
+        regCheck = re.compile('^\s*'+ regAlt+'\s*$')  
 
-        if ("|" in mutation):    #for multiple evalution
-            print("\n\n Multiple Evaluations using : \t", mutation)
-            multiEval = mutation.split("|")
+        if(regCheck.search(mutation) == None):
+            print("\n\n Mutation encoding not valid: \t",mutation)
+            sys.exit(-1)
+
+        mutationCommaSep = mutation.split(',')
+        print("\n Evaluations of : \t", mutation)
+        for iC , eC in enumerate(mutationCommaSep):
+            multiEval = eC.split("|")
             for index , element in enumerate(multiEval):
                 part_1, part_2, = element.split('&', 1)    #SRNA & Gene split
 #                if("-" in part_2):   //"multiple evaluation with  "-" is found"
 #                    negGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
 #                else:
-                boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
-                boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
+                boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))    #sRNA check
+                boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))    #Gene Checkl
                 complementBase(part_2, part_1)
 
-        elif ("," in mutation):
-            print("\n\n Mutation with Bar ',' : \t", mutation)
-        else:
-            part_1, part_2 = mutation.split('&', 1)
-            boolsRNA(part_1, sRNAGene[record].get("fasta") ,sRNAGene[record].get("name"))
-            boolsGene(part_2, sRNAGene[record].get("gene").get("Sequence") ,sRNAGene[record].get("gene").get("name"))
-            complementBase(part_2, part_1)
-
-"SRNA Check"
+""" SRNA Check""" #The sequence is in DNA notation, ie. we will have to replace U with T to search.
 def boolsRNA(checkMut, sequence, name):
     position = int(re.findall(r'\d+', checkMut)[0])
     base_1 = checkMut[0].upper()
     base_2 = checkMut[-1].upper()
     if base_1 == "U":
         base_1 = "T"
-    if len(sequence) > position:
+    if len(sequence) > position:   
         fromSeq = sequence[position-1].upper()
-        if fromSeq == base_1:
-            print()
-            # print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
-            # complementBase(base_1, base_2)
-        else :
+        if fromSeq != base_1:
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
-            
+            sys.exit(-1)
             # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
         print("Lenght of Sequence : \t",len(sequence))
         print("Encountered position to find : \t", position)
 
-"Gene Check"
+""" Gene Check""" #The sequence is in DNA notation, ie. we will have to replace U with T to search.
 def boolsGene(checkMut, sequence, name):
     position = upstreamAUG + int(re.findall(r'-?\d+', checkMut)[0])
-    if (position < upstreamAUG):
+    if (position < upstreamAUG):    #if substring is located within first 200
         position += 1
     base_1 = checkMut[0].upper()
     base_2 = checkMut[-1].upper()
@@ -144,30 +144,26 @@ def boolsGene(checkMut, sequence, name):
         base_1 = "T"
     if len(sequence) > position:
         fromSeq = sequence[position-1].upper()
-        if fromSeq == base_1:
-            print()
-            # print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : True")
-            # complementBase(base_1, base_2)
-        else :
+        if fromSeq != base_1:
             print("\n  To check ",base_1," in position ",position," in from sequence in file ",name," : Evaluation result Got ",fromSeq," : False")
-            
+            sys.exit(-1)
             # complementBase(base_1, base_2)
     else :
         print("Check for Typo as Sequence is shorter than specified index to check in file", name)
         print("Lenght of Sequence : \t",len(sequence))
         print("Encountered position to find : \t", position)
 
-"negative indices in sRNA"
+""" negative indices in sRNA""" #In total each sequence is 300nt long.When subsequence covers 200nt in front of the start codon's first nucleotide (ie. positions -200 to -1)
 def negGene(checkMut, sequence, name):
     seqLen = len(sequence)
-    position = upstreamAUG + int(re.findall(r'-*\d+', checkMut)[0]) +1
+    position = upstreamAUG + int(re.findall(r'-*\d+', checkMut)[0]) +1    
     newMut = checkMut[0].upper()+str(position)+checkMut[-1].upper()
     boolsGene(newMut, sequence, name)
 
 
 """ Watson-crick Method for finding Gene complement """
-def complementBase(before, after):
-    print(before, after)
+def complementBase(before, after):    #complementarity check of nucleotides before and after mutation. 
+    print('\tcheck complementarity: ',before, after)
     b_check_1 = before[0].upper()
     a_check_1 = after[0].upper()
     b_check_2 = before[-1].upper()
@@ -183,21 +179,14 @@ def complementBase(before, after):
         if element == T:
             element = U
 
-    if (((b_check_1 == C or b_check_1 == U) and a_check_1 == G) or (b_check_1 == G and (a_check_1 == C or a_check_1 == U))):
-        print("Gene complement matched", b_check_1, " <-> ", a_check_1)
-    elif ((b_check_1 == A and a_check_1 == U) or (b_check_1 == U and a_check_1 == A)):
-        print("Gene complement matched", b_check_1, " <-> ", a_check_1)
-    else:
+    if (not (((b_check_1 == C or b_check_1 == U) and a_check_1 == G) or (b_check_1 == G and (a_check_1 == C or a_check_1 == U)) or ((b_check_1 == A and a_check_1 == U) or (b_check_1 == U and a_check_1 == A)))):
         print("Gene complement mismatched", b_check_1, " <-!WRONG!-> ", a_check_1)
+        sys.exit(-1)
         
 
-    if (((b_check_2 == C or b_check_2 == U) and a_check_2 == G) or (b_check_2 == G and (a_check_2 == C or a_check_2 == U))):
-        print("Gene complement matched", b_check_2, " <-> ", a_check_2)
-    elif ((b_check_2 == A and a_check_2 == U) or (b_check_2 == U and a_check_2 == A)):
-        print("Gene complement matched", b_check_2, " <-> ", a_check_2)
-    else:
+    if (not (((b_check_2 == C or b_check_2 == U) and a_check_2 == G) or (b_check_2 == G and (a_check_2 == C or a_check_2 == U)) or ((b_check_2 == A and a_check_2 == U) or (b_check_2 == U and a_check_2 == A)))):
         print("Gene complement mismatched", b_check_2, " <-!WRONG!-> ", a_check_2)
-       
+        sys.exit(-1)   
 
 
 """ Run this only when you want to update the data  """
