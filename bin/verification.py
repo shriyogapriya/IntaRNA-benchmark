@@ -20,8 +20,8 @@ column_name = 'mutation-sRNA&gene' # 6
 fileformat = ".fasta"
 
 # regSingle = r'[ACGU]\d+[ACGU]&[ACGU]-?\d+[ACGU]'
-# regMulti = 'regSingle(|regSingle)*'
-# regAlt = 'regMulti(,regMulti)*'
+# regMulti = 'regSingle(,regSingle)*'
+# regAlt = 'regMulti(|regMulti)*'
 # regCheck = '^\s* regAlt \s*$'   
 
 rows = []
@@ -94,18 +94,18 @@ def processLoop():
     for index, record in enumerate(sRNAGene):
         mutation = sRNAGene[record].get("mutation")
         regSingle = '[ACGU]\d+[ACGU]&[ACGU]-?\d+[ACGU]'
-        regMulti = regSingle+'(\|'+regSingle+')*'
-        regAlt = regMulti#+'(,'+regMulti+')*'
+        regMulti = regSingle+'(,'+regSingle+')*'
+        regAlt = regMulti+'(\|'+regMulti+')*'
         regCheck = re.compile('^\s*'+ regAlt+'\s*$')  
 
         if(regCheck.search(mutation) == None):
             print("\n\n Mutation encoding not valid: \t",mutation)
             sys.exit(-1)
 
-        mutationCommaSep = mutation.split(',')
+        mutationCommaSep = mutation.split('|')
         print("\n Evaluations of : \t", mutation)
         for iC , eC in enumerate(mutationCommaSep):
-            multiEval = eC.split("|")
+            multiEval = eC.split(",")
             for index , element in enumerate(multiEval):
                 part_1, part_2, = element.split('&', 1)    #SRNA & Gene split
 #                if("-" in part_2):   //"multiple evaluation with  "-" is found"
